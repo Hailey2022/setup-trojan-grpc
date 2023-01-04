@@ -8,6 +8,8 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 # https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert
 curl https://get.acme.sh | sh
-acme.sh --issue -d yourdomain.com --standalone
+
+# make sure tcp port 80 is opened or use zerossl
+~/.acme.sh/acme.sh --issue -d yourdomain.com --standalone --server letsencrypt
 ...
 ```
